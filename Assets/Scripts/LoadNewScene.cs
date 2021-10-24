@@ -11,4 +11,9 @@ public class LoadNewScene : MonoBehaviour
     public void changeScene(){
         SceneManager.LoadScene(scene);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        changeScene();
+    }
 }

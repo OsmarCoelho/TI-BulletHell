@@ -5,15 +5,12 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public GameObject bullet;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public AudioSource shoot;
+    
     void Update()
     {
-       if(Input.GetKeyDown(KeyCode.Space)){
+       if(Input.GetKeyDown(KeyCode.J)){
+           shoot.Play();
            Instantiate(bullet, transform.position, transform.rotation);
        }
     }

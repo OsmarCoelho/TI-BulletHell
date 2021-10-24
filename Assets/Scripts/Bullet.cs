@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private float speed = 10.0f, damage = 1.0f;
+    public float speed = 20.0f;
+    private Vector3 dir = new Vector3(0, 0, 1);
+    
     void Start()
     {
         Destroy(gameObject, 3.0f);
     }
 
-    
     void Update()
     {
-        transform.Translate(transform.up * speed * Time.deltaTime);
+        transform.position = transform.position + dir * speed * Time.deltaTime;
+    }
+
+    void OnCollisionEnter(Collision other){
+        if(other.gameObject.tag != "Player" ||other.gameObject.tag != "Shield"){
+            Destroy(gameObject);
+        }
     }
 }

@@ -6,6 +6,13 @@ TagManager:
   tags:
   - WeaponI
   - WeaponII
+  - Points
+  - Bullet
+  - EnemyBullet
+  - Vida
+  - Weapon
+  - Enemy
+  - Shield
   layers:
   - Default
   - TransparentFX
