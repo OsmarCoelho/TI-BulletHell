@@ -14,6 +14,7 @@ public class LoadNewScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")changeScene();
+        if(other.gameObject.tag != "Bullet" && other.gameObject.tag != "Enemy" && other.gameObject.tag != "EnemyBullet")
+            changeScene();
     }
 }

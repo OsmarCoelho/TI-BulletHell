@@ -7,9 +7,10 @@ public class Player : MonoBehaviour
 {
     const float LIMIT = 13.0f;
     private float h, v;
-    private bool canShieldBeActive = true, canMissileBeLaunched = true;
+    private bool canShieldBeActive = true/* , canMissileBeLaunched = true */;
     private Vector3 dir;
     public float speed = 10.0f, life = 1.0f, energy = 0.0f;
+    public bool lifeCheat = false;
     public GameObject weapon;
     public Shield shield;
     public AudioSource hit, dies;
@@ -44,10 +45,10 @@ public class Player : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other){
-        if(other.gameObject.tag == "EnemyBullet" && !shield.gameObject.activeSelf){
+        if(other.gameObject.tag == "EnemyBullet" && !shield.gameObject.activeSelf && !lifeCheat){
             hit.Play();
             life = life - 0.1f;
-        }else if(other.gameObject.tag == "Enemy" && !shield.gameObject.activeSelf){
+        }else if(other.gameObject.tag == "Enemy" && !shield.gameObject.activeSelf && !lifeCheat){
             hit.Play();
             life = life - 0.1f;
         }else if(other.gameObject.tag == "Vida"){
