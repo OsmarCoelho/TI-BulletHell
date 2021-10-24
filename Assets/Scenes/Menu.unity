@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5498ea0e8961fc74c8641bf521272d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: FaseI
+  scene: AudioConfiguration
 --- !u!1 &398780849
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,6 @@ public class LoadNewScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        changeScene();
+        if(other.gameObject.tag == "Player")changeScene();
     }
 }

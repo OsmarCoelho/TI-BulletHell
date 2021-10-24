@@ -145,7 +145,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 124
+  m_Constraints: 118
   m_CollisionDetection: 0
 --- !u!114 &1730298716597895704
 MonoBehaviour:
@@ -163,6 +163,7 @@ MonoBehaviour:
   speed: 10
   value: 5
   player: {fileID: 0}
+  camera: {fileID: 0}
   hud: {fileID: 0}
   hit: {fileID: 8438251553030294126}
 --- !u!1 &4874100842286203760
@@ -282,19 +283,19 @@ AudioSource:
   m_GameObject: {fileID: 7221060856073998040}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2741851308374527931, guid: 4ca26b8a6fc5d68ab85ed97bac615f25, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3dd8f377c666d9182bd689ae20a1b519, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.744
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 100
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -504,7 +505,7 @@ AudioSource:
   m_GameObject: {fileID: 8404488374126448614}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2741851308374527931, guid: 4ca26b8a6fc5d68ab85ed97bac615f25, type: 2}
   m_audioClip: {fileID: 8300000, guid: e51280719e9fb992895b0ce617a5b612, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

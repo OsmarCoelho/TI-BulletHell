@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision other){
-        if(other.gameObject.tag != "Player" ||other.gameObject.tag != "Shield"){
+        if(other.gameObject.tag != "Player"){
             Destroy(gameObject);
         }
     }

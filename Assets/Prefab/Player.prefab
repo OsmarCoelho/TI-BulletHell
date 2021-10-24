@@ -40,7 +40,7 @@ AudioSource:
   m_GameObject: {fileID: 779810488610070545}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2741851308374527931, guid: 4ca26b8a6fc5d68ab85ed97bac615f25, type: 2}
   m_audioClip: {fileID: 8300000, guid: 11ac34cbc53a2f975b61f730c8480d42, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -463,7 +463,7 @@ AudioSource:
   m_GameObject: {fileID: 3042891641139563207}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2741851308374527931, guid: 4ca26b8a6fc5d68ab85ed97bac615f25, type: 2}
   m_audioClip: {fileID: 8300000, guid: fec418a15d7e5407293eb9959e969501, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -590,7 +590,7 @@ AudioSource:
   m_GameObject: {fileID: 4049589325329349437}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2741851308374527931, guid: 4ca26b8a6fc5d68ab85ed97bac615f25, type: 2}
   m_audioClip: {fileID: 8300000, guid: f2086250994391220b5726e53413d387, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -717,7 +717,7 @@ AudioSource:
   m_GameObject: {fileID: 4258845067994397329}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2741851308374527931, guid: 4ca26b8a6fc5d68ab85ed97bac615f25, type: 2}
   m_audioClip: {fileID: 8300000, guid: 939bfa006bd8b8f56a07889df1c55420, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1116,6 +1116,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2126347775998921817}
     m_Modifications:
+    - target: {fileID: 6036971355924552489, guid: ff343afe9b1f00b9d85cb8eb0446d0ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036971355924552489, guid: ff343afe9b1f00b9d85cb8eb0446d0ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 6974733596042951944, guid: ff343afe9b1f00b9d85cb8eb0446d0ca, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1126,11 +1134,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6974733596042951944, guid: ff343afe9b1f00b9d85cb8eb0446d0ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.005
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 6974733596042951944, guid: ff343afe9b1f00b9d85cb8eb0446d0ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.451
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6974733596042951944, guid: ff343afe9b1f00b9d85cb8eb0446d0ca, type: 3}
       propertyPath: m_LocalRotation.w
