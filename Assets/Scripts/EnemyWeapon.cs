@@ -7,10 +7,11 @@ public class EnemyWeapon : MonoBehaviour
     public GameObject bullet;
 
     public AudioSource shoot;
+    public float interval = 2.0f;
 
     void Start()
     {
-        InvokeRepeating("spawn", 0, 2);
+        InvokeRepeating("spawn", 0, interval);
     }
 
     void spawn()
