@@ -29,6 +29,7 @@ public class Controller : MonoBehaviour
 
     public void togglePause(){
         isPaused = !isPaused;
+        //Time.timeScale = isPaused ? 1 : 0;
         pauseScreen.SetActive(isPaused);
     }
 
