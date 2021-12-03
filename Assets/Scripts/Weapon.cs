@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
     
     void Update()
     {
-       if(Input.GetKeyDown(KeyCode.J)){
+       if(Input.GetKeyDown(KeyCode.Space)){
            shoot.Play();
            Instantiate(bullet, transform.position, transform.rotation);
        }

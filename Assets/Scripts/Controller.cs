@@ -4,34 +4,56 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour
-{    
+{
     public string actualScene, nextScene;
+
     public bool isPaused = false;
+
     public GameObject pauseScreen;
+
     public Player player;
 
     public void changeScene(string scene)
     {
         SceneManager.LoadScene (scene);
     }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)){
-            changeScene(actualScene);
-        }else if(Input.GetKeyDown(KeyCode.F2)){
-            changeScene(nextScene);
-        }else if(Input.GetKeyDown(KeyCode.F3)){
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            changeScene (actualScene);
+        }
+        else if (Input.GetKeyDown(KeyCode.F2))
+        {
+            changeScene (nextScene);
+        }
+        else if (Input.GetKeyDown(KeyCode.F3))
+        {
             player.lifeCheat = true;
-        }else if(Input.GetKeyDown(KeyCode.Escape)){
-            togglePause();
+        }
+        else if (Input.GetKeyDown(KeyCode.F4))
+        {
+            player.energyCheat = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            onPause();
         }
     }
 
-    public void togglePause(){
-        isPaused = !isPaused;
-        //Time.timeScale = isPaused ? 1 : 0;
-        pauseScreen.SetActive(isPaused);
+    public void onPause()
+    {
+        if (isPaused)
+        {
+            isPaused = false;
+            Time.timeScale = 1;
+        }
+        else if (!isPaused)
+        {
+            isPaused = true;
+            Time.timeScale = 0.0f;
+        }
+        pauseScreen.SetActive (isPaused);
     }
-
-
 }

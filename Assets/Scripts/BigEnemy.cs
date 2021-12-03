@@ -26,5 +26,11 @@ public class BigEnemy : MonoBehaviour
                 player.energy += 0.1f;
             }
         }
+
+        if (other.gameObject.tag == "Missile"){
+            Destroy(gameObject);
+            hud.points = hud.points + value;
+            player.energy += 0.1f;
+        }
     }
 }

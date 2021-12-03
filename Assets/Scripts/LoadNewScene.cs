@@ -5,16 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class LoadNewScene : MonoBehaviour
 {
-    
     public string scene;
-    
-    public void changeScene(){
-        SceneManager.LoadScene(scene);
+
+    public void changeScene()
+    {
+        SceneManager.LoadScene (scene);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag != "Bullet" && other.gameObject.tag != "Enemy" && other.gameObject.tag != "EnemyBullet")
-            changeScene();
+        if (
+            other.gameObject.tag != "Bullet" &&
+            other.gameObject.tag != "Enemy" &&
+            other.gameObject.tag != "EnemyBullet"
+        ) changeScene();
+    }
+
+    public void quitGame(){
+        Application.Quit();
+    }
+
+    public IEnumerator changeSceneAfter()
+    {
+        yield return new WaitForSeconds(3);
+        changeScene();
     }
 }

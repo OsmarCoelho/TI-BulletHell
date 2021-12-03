@@ -7,10 +7,11 @@ public class Player : MonoBehaviour
 {
     const float LIMIT = 13.0f;
     private float h, v;
-    private bool canShieldBeActive = true/* , canMissileBeLaunched = true */;
+    private bool canShieldBeActive = true;
     private Vector3 dir;
     public float speed = 10.0f, life = 1.0f, energy = 0.0f;
-    public bool lifeCheat = false;
+    public bool lifeCheat = false, energyCheat = false;
+    public GameObject missile;
     public GameObject weapon;
     public Shield shield;
     public AudioSource hit, dies;
@@ -30,12 +31,18 @@ public class Player : MonoBehaviour
             v = v + 1;
         }
 
-        if(Input.GetKeyDown(KeyCode.L) && canShieldBeActive){
+        if(Input.GetKeyDown(KeyCode.Y) && canShieldBeActive){
            shield.toggleShieldState();  
            canShieldBeActive = false;
            StartCoroutine(shieldCooldown(5));
-       }else if (Input.GetKeyDown(KeyCode.L)){
-           Debug.Log("Escudo não pode ser ativado");
+       }
+       if(Input.GetKeyDown(KeyCode.U) && energy >= 1.0f){
+            Instantiate(missile, transform.position, transform.rotation);
+            energy = 0.0f;
+       }
+
+       if(energyCheat){
+           energy = 1.0f;
        }
 
         transform.rotation = Quaternion.Euler(0, 0, -30 * h);
